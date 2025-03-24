@@ -1,3 +1,3 @@
-module insertion_sort
+module sort_alogrithms
 
 go 1.22.2

@@ -58,7 +58,24 @@ func insertion_sort(values []int, debug bool) []int {
 
 }
 
+func insertion_sort_reverse(values []int) []int {
+	for i := 1; i < len(values); i++ {
+		key := values[i]
+		j := i - 1
+
+		for j >= 0 && values[j] < key {
+			values[j+1] = values[j]
+			j--
+		}
+		values[j+1] = key
+	}
+
+	return values
+}
+
 func main() {
 	values := []int{5, 2, 4, 6, 1, 3}
-	insertion_sort(values, true)
+	insertion_sort_reverse(values)
+
+	fmt.Printf("values %v\n", values)
 }

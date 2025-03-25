@@ -29,19 +29,15 @@ func merge(left, right []int) []int {
 		}
 	}
 
-	for ; i < len(left); i++ {
-		result = append(result, left[i])
-	}
-
-	for ; j < len(right); j++ {
-		result = append(result, right[j])
-	}
+	result = append(result, left[i:]...)
+	result = append(result, right[j:]...)
 
 	return result
 }
 
 func main() {
 	unsorted := []int{10, 6, 2, 1, 5, 8, 3, 4, 7, 9}
+
 	fmt.Printf("unsorted %v\n", unsorted)
 	sorted := merge_sort(unsorted)
 	fmt.Printf("sorted %v\n", sorted)

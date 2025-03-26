@@ -54,4 +54,8 @@ Since we do `log(n)` levels of splitting, the overall time complexity is:
 
 `O(nlogn)`
 
+- n/2k=1
+- 2k=n
+- k=log⁡2n
+
 Space Complexity: `O(n)` (for the temporary arrays during merging).

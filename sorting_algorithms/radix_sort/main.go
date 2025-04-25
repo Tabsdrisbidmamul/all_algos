@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func get_max(arr []int) int {
+	if len(arr) == 0 {
+		return 0
+	}
+
 	max := arr[0]
 	for _, val := range arr {
 		if val > max {
@@ -38,6 +42,10 @@ func counting_sort(arr []int, exp int) []int {
 }
 
 func radix_sort(arr []int) []int {
+	if len(arr) == 0 {
+		return arr
+	}
+
 	max := get_max(arr)
 
 	for exp := 1; max/exp > 0; exp *= 10 {
@@ -48,7 +56,7 @@ func radix_sort(arr []int) []int {
 }
 
 func main() {
-	arr := []int{170, 45, 75, 90, 802, 24, 2, 66}
+	arr := []int{170, 45, 75, 90, 802, 24, 2, 66, 99, 10, 100}
 	fmt.Println("Unsorted array:", arr)
 	sortedArr := radix_sort(arr)
 	fmt.Println("Sorted array:", sortedArr)

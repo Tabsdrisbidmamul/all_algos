@@ -1,0 +1,2 @@
+# Bucket Sort
+A simple algorithm where the original array is partitioned to buckets, and either sort the buckets with a sorting algorithm (quicksort, mergesort, etc) or recursive bucket sort and merge the arrays till you have a sorted array

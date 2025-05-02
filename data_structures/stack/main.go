@@ -42,6 +42,8 @@ func (s *Stack[T]) is_empty() bool {
 func main() {
 	stack := Stack[int]{}
 
+	fmt.Println("empty stack: ", must(stack.peek()))
+
 	stack.push(10)
 	stack.push(20)
 	stack.push(30)
